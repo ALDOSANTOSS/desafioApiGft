@@ -1,8 +1,8 @@
 package com.example.desafioapigft.controller;
 
-import com.example.desafioapigft.dto.user.ConsultaUserDto;
-import com.example.desafioapigft.dto.user.RegistroUserDTO;
-import com.example.desafioapigft.dto.user.UserMapper;
+import com.example.desafioapigft.dto.userDto.ConsultaUserDto;
+import com.example.desafioapigft.dto.userDto.RegistroUserDTO;
+import com.example.desafioapigft.dto.userDto.UserMapper;
 import com.example.desafioapigft.entity.User;
 import com.example.desafioapigft.services.UserService;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +31,9 @@ public class UserController {
         User user = userService.saveUser(UserMapper.fromDTO(dto));
         return ResponseEntity.ok(UserMapper.fromEntity(user));
     }
+
+
+
 
 
 }

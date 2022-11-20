@@ -1,11 +1,12 @@
-package com.example.desafioapigft.dto.user;
+package com.example.desafioapigft.dto.userDto;
+
 
 import com.example.desafioapigft.entity.User;
 
 public class UserMapper {
 
     public static User fromDTO(RegistroUserDTO dto){
-        return new User(dto.getEmail(),dto.getPassword());
+        return new User(null,dto.getEmail(),dto.getPassword());
     }
 
     public static ConsultaUserDto fromEntity(User user){
